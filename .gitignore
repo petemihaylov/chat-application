@@ -19,3 +19,15 @@
 
 # Go workspace file
 go.work
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
