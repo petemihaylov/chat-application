@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 
 import { connect, sendMsg } from './api'
 import ChatHistory from './components/ChatHistory'
+import ChatInput from './components/ChatInput'
 
 function App() {
   const [chatHistory, setHistory] = useState([])
@@ -16,15 +17,18 @@ function App() {
     })
   }, [])
 
-  const send = () => {
-    sendMsg('Hello')
+  const send = (event) => {
+    if (event.keyCode === 13) {
+      sendMsg(event.target.value)
+      event.target.value = ''
+    }
   }
 
   return (
     <div className="App">
       <Header />
       <ChatHistory chatHistory={chatHistory} />
-      <button onClick={send}>Send</button>
+      <ChatInput send={send} />
     </div>
   )
 }
