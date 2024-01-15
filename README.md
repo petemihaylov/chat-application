@@ -2,6 +2,8 @@
 
 This is a basic Go application with a React client. The Go application resides in the `backend/` directory and the ReactJS application resides in the `frontend/` directory.
 
+![image](https://github.com/petemihaylov/chat-system-in-go-and-react/assets/15163891/8b394bce-b666-40b9-ab65-fb9c64660b55)
+
 ### Prerequisites
 
 - You will need Go version 1.11+ installed on your machine.
